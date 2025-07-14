@@ -1,0 +1,40 @@
+# === Node.js Backend ===
+backend/node_modules/
+backend/.env
+backend/.env*.local
+backend/*.log
+
+# === React Native Expo Frontend ===
+mobile-frontend/node_modules/
+mobile-frontend/.expo/
+mobile-frontend/.expo-shared/
+mobile-frontend/dist/
+mobile-frontend/web-build/
+mobile-frontend/expo-env.d.ts
+
+# Android/iOS native (if ever used)
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.kotlin/
+*.orig.*
+
+# Debug logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS & system files
+.DS_Store
+*.pem
+
+# Typescript build info
+*.tsbuildinfo
+
+# Metro
+.metro-health-check*
+
+# VS Code settings
+.vscode/
