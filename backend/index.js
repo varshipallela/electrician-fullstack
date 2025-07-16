@@ -1,3 +1,21 @@
+// const express = require('express');
+// const cors = require('cors');
+// require('dotenv').config();
+
+// const authRoutes = require('./routes/auth');
+// const taskRoutes = require('./routes/tasks');
+
+// const app = express();
+// app.use(cors());
+// app.use(express.json());
+
+// app.use('/api', authRoutes);
+// app.use('/api/tasks', taskRoutes);
+
+// app.listen(process.env.PORT, () =>
+//   console.log(`🚀 Server running on http://localhost:${process.env.PORT}`)
+// );
+// index.js
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -9,16 +27,12 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use('/api', authRoutes);
 
-// Test route
-app.get('/', (req, res) => {
+app.listen(process.env.PORT, () => {
+  console.log(`http://localhost:${process.env.PORT}`);
+  app.get('/', (req, res) => {
   res.send('Backend API is working!');
 });
 
-// API routes
-app.use('/api', authRoutes);
-
-// Start server
-app.listen(process.env.PORT, () => {
-  console.log(`✅ Server running: http://localhost:${process.env.PORT}`);
 });
